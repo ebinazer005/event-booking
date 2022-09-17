@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+</head>
+<style>
+    body{
+        margin: 0px;
+        font-family: "poppins";
+
+    }
+    
+    .bg{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+    }
+    .bgimg{
+        background-image: linear-gradient( rgba(41, 91, 100, 0.8), rgba(0, 0, 0, 0.8)), url("login.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding:100px;
+    }
+    .card{
+        
+        margin-bottom:40px;
+        background-size:cover;
+        border-radius: 20px;
+        
+        padding:100px;
+        background-image: linear-gradient( rgba(35, 86, 95, 0.8), rgba(0, 0, 0, 0.8)),url("insidelogin.jpg");
+        
+    }
+    .btn{
+        border-radius: 3px;
+        margin-top:30px;
+        width:180px;
+        padding:10px;
+        border-width:0px;
+        margin-left:120px;
+    }
+    .nav{
+       
+        position: absolute;
+        top: 8px;
+        right: 16px;
+        background-color: aliceblue;
+        padding:10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        border-radius:10px;
+    }
+       .navContent{
+        margin:10px;
+        color: black;
+       }
+    input{
+        width: 400px;
+        height:30px;
+    }
+   i{
+    margin-bottom: 100px;
+   }
+</style>
+<body>
+    <div class="display" id="ebi">
+        
+            <div class="nav">
+                <a href="./index.html" class="navContent">Contact + Connect</a>
+                
+           </div>
+        <div class="bgimg">
+            <div class="bg ">
+                <a href="./login .html">
+                    <i class="fa-solid fa-xmark" style="font-size:40px; color: black;"></i>
+                </a>
+                
+                <div class= "card">
+                    <p id="p" style="color: red; font-size:medium ">mnv </p>
+                    <input type="text" placeholder="Email" style="padding:8px; border-radius:5px; border-width:0px;  "  id="signinEmail" ><br><br>
+                    <input type="password" placeholder="Password" style="padding:8px;  border-radius:5px; border-width:0px" id="signPass"><br><br>
+                    <input type="password" placeholder="Confirm Password" style="padding:8px;  border-radius:5px; border-width:0px" id="conPassword"><br><br>
+                    <button class="btn" onclick="ebii()" type="submit">Sing in </button><br>
+                    
+                </div>
+        
+            </div>
+        </div>
+        
+
+    </div>
+
+    
+    
+    
+</body>
+<script>
+    
+    function ebii(){
+
+        email=document.getElementById("signinEmail").value;
+        pass=document.getElementById("signPass").value;
+        cpass=document.getElementById("conPassword").value;
+        para=document.getElementById("p")
+        if (email === ""){
+            para.textContent="enter your Email"
+        }
+
+        else if(pass=== ""){
+            para.textContent="enter your password"
+        }
+        else if(cpass === ""){
+            para.textContent="confirm your password"
+        }
+
+        else if (pass != cpass){
+            para.textContent="password is not match"
+        }
+        
+        else{
+            location.replace("login .html")
+            
+        }
+
+}
+
+    
+
+</script> 
+</html>

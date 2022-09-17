@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<style>
+    body{
+        margin: 0px;
+        font-family: "poppins";
+
+    }
+    
+    .bg{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+    }
+    .bgimg{
+        background-image: linear-gradient( rgba(41, 91, 100, 0.8), rgba(0, 0, 0, 0.8)), url("login.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding:100px;
+    }
+    .card{
+        margin-top:100px;
+        margin-bottom:40px;
+        background-size:cover;
+        border-radius:20px;
+        padding:70px;
+        background-image: linear-gradient( rgba(35, 86, 95, 0.8), rgba(0, 0, 0, 0.8)),url("insidelogin.jpg");
+        
+    }
+    .btn{
+        border-radius: 3px;
+        margin-top:30px;
+        width:180px;
+        padding:5px;
+        border-width:0px;
+
+    }
+    .nav{
+       
+        position: absolute;
+        top: 8px;
+        right: 16px;
+        background-color: aliceblue;
+        padding:10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        border-radius:10px;
+    }
+       .navContent{
+        margin:10px;
+        color: black;
+       }
+</style>
+<body>
+    <div class="display" id="ebi">
+        
+            <div class="nav">
+                <a href="./index.html" class="navContent">Contact + Connect</a>
+                
+           </div>
+        <div class="bgimg">
+            <div class="bg ">
+                <div class="card">
+                    <label style="color:aliceblue;">Email</label><br>
+                    <p id="p" style="color: red; font-size: small;"></p>
+                    <input type="text" placeholder="Email" style="padding:6px; border-radius:5px; border-width:0px; " id ="email"><br><br>
+                    <label style="color:aliceblue;">Password</label><br>
+                    <input type="password" placeholder="Password" style="padding:6px;  border-radius:5px; border-width:0px" id="password"><br><br>
+                    <button class="btn" onclick="ebi()">Login</button><br>
+                    
+                    <a href="./singin.html" style="color: rgb(64, 26, 235);">-->Sing in</a>
+                </div>
+        
+            </div>
+        </div>
+        
+
+    </div>
+    <!-- <button  onclick="ebi()" id="log">
+        Login
+    </button> -->
+    
+    
+    
+</body>
+<script>
+    function ebi(){
+
+    a=document.getElementById("email").value;
+    b=document.getElementById("password").value;
+    p=document.getElementById("p")
+    if (a === ""){
+        p.textContent="enter your Email"
+    }
+    else if(b=== ""){
+        p.textContent="enter your password"
+    }
+
+    
+    else{
+        location.replace("mainpage.html")
+    }
+
+    }
+        
+
+</script>
+
+</html>
